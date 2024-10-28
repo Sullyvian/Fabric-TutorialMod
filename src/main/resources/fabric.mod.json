@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "tutorial-mod",
+	"id": "tutorialmod",
 	"version": "${version}",
 	"name": "Tutorial Mod",
 	"description": "This is just a mod made by following a tutorial.",
@@ -9,10 +9,10 @@
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/Sullyvian/Fabric-TutorialMod"
 	},
 	"license": "MIT",
-	"icon": "assets/tutorial-mod/icon.png",
+	"icon": "assets/tutorialmod/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -22,11 +22,11 @@
 			"net.sullyvian.tutorialmod.TutorialModDataGenerator"
 		],
 		"client": [
-			"net.sullyvian.TutorialModClient"
+			"net.sullyvian.tutorialmod.TutorialModClient"
 		]
 	},
 	"mixins": [
-		"tutorial-mod.mixins.json"
+		"tutorialmod.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.7",
