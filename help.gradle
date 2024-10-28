@@ -1,0 +1,23 @@
+// setup commands
+
+// Generates readable source files for minecraft. Run once at start
+// ./gadlew genSources
+
+// dev commands
+
+// Launches Minecraft in a dev env to test mod
+// ./gradlew runClient
+
+// Starts a dedicated server instance to test multiplayer functionnality
+// ./gradlew runServer
+
+// build commands
+
+// compiles and packages the mod in .jar file in build/libs. Use when ready for distribution
+// ./gradlew build
+
+// deletes previous build artifacts, forcing rebuild from scratch
+// ./gradlew clean
+
+// Lists all dependencies
+// ./gradlew dependencies
