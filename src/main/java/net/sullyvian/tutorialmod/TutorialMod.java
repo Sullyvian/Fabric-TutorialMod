@@ -1,6 +1,7 @@
 package net.sullyvian.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
+import net.sullyvian.tutorialmod.block.ModBlocks;
 import net.sullyvian.tutorialmod.item.ModItems;
 
 import org.slf4j.Logger;
@@ -13,5 +14,6 @@ public class TutorialMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems(); // add items
+		ModBlocks.registerModBlocks(); // add blocks
 	}
 }
