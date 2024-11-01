@@ -8,5 +8,5 @@ public class TutorialModClient implements ClientModInitializer {
     public void onInitializeClient() {
 
     }
-    
+
 }
