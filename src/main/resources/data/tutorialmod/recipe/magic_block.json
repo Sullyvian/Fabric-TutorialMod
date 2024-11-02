@@ -4,15 +4,18 @@
   "key": {
     "#": {
       "item": "tutorialmod:pink_garnet"
+    },
+    "X": {
+      "item": "minecraft:diamond"
     }
   },
   "pattern": [
     "###",
-    "###",
+    "#X#",
     "###"
   ],
   "result": {
     "count": 1,
-    "id": "tutorialmod:pink_garnet_block"
+    "id": "tutorialmod:magic_block"
   }
 }
