@@ -5,6 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.sullyvian.tutorialmod.TutorialMod;
 import net.sullyvian.tutorialmod.item.custom.ChiselItem;
@@ -17,7 +18,15 @@ public class ModItems {
     public static final Item CHISEL = registerItem("chisel", new ChiselItem(new Item.Settings().maxDamage(32)));
 
     public static final Item CAULIFLOWER = registerItem("cauliflower",
-            new Item(new Item.Settings().food(ModFoodComponents.CAULIFLOWER)));
+            new Item(new Item.Settings().food(ModFoodComponents.CAULIFLOWER)) {
+                @Override
+                public void appendTooltip(net.minecraft.item.ItemStack stack, TooltipContext context,
+                        java.util.List<net.minecraft.text.Text> tooltip, net.minecraft.item.tooltip.TooltipType type) {
+                    // pas ouf, mais why not (c'est une "anonymous class")
+                    tooltip.add(Text.translatable("tooltip.tutorialmod.cauliflower.tooltip"));
+                    super.appendTooltip(stack, context, tooltip, type);
+                };
+            });
 
     public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", new Item(new Item.Settings()));
 

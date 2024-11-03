@@ -5,6 +5,7 @@
 - [Recipes Help](https://misode.github.io/recipe/)
 - [Loot Tables Help](https://misode.github.io/loot-table/)
 - [Any](https://misode.github.io/)
+- [Formatting codes](https://minecraft.wiki/w/Formatting_codes)
 
 ## Useful commands
 
