@@ -14,5 +14,6 @@
   "tooltip.tutorialmod.magic_block.tooltip": "This block is very very §9MAGICAL§r.",
   "tooltip.tutorialmod.chisel.shift_down": "This Item chisels blocks into bricks !",
   "tooltip.tutorialmod.chisel": "Press §eShift§r for more information",
-  "tooltip.tutorialmod.cauliflower.tooltip": "This is delicious !"
+  "tooltip.tutorialmod.cauliflower.tooltip": "This is delicious !",
+  "tag.item.tutorialmod.transformable_items": "Transformable Items"
 }

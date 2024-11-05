@@ -1,6 +1,6 @@
 package net.sullyvian.tutorialmod.util;
 
-import net.minecraft.block.Block;
+// import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
@@ -18,9 +18,9 @@ public class ModTags {
      */
     public static class Blocks {
 
-        private static TagKey<Block> creatTag(String name) {
-            return TagKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, name));
-        }
+        // private static TagKey<Block> createTag(String name) {
+        //     return TagKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, name));
+        // }
     }
 
     /**
