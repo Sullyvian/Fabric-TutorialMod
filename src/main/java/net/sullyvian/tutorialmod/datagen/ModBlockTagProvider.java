@@ -27,7 +27,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.RAW_PINK_GARNET_BLOCK)
                 .add(ModBlocks.PINK_GARNET_ORE)
                 .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE)
-                .add(ModBlocks.MAGIC_BLOCK);
+                .add(ModBlocks.MAGIC_BLOCK)
+                // add the Pink Garnet's derivatives
+                .add(ModBlocks.PINK_GARNET_STAIRS, ModBlocks.PINK_GARNET_SLAB, ModBlocks.PINK_GARNET_BUTTON,
+                        ModBlocks.PINK_GARNET_PRESSURE_PLATE, ModBlocks.PINK_GARNET_FENCE,
+                        ModBlocks.PINK_GARNET_FENCE_GATE, ModBlocks.PINK_GARNET_WALL, ModBlocks.PINK_GARNET_DOOR,
+                        ModBlocks.PINK_GARNET_TRAPDOOR);
 
         // add the blocks to needs_iron_tool.json
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
@@ -35,7 +40,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.RAW_PINK_GARNET_BLOCK)
                 .add(ModBlocks.PINK_GARNET_ORE)
                 .add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE)
-                .add(ModBlocks.MAGIC_BLOCK);
+                .add(ModBlocks.MAGIC_BLOCK)
+                // add the Pink Garnet's derivatives
+                .add(ModBlocks.PINK_GARNET_STAIRS, ModBlocks.PINK_GARNET_SLAB, ModBlocks.PINK_GARNET_BUTTON,
+                        ModBlocks.PINK_GARNET_PRESSURE_PLATE, ModBlocks.PINK_GARNET_FENCE,
+                        ModBlocks.PINK_GARNET_FENCE_GATE, ModBlocks.PINK_GARNET_WALL, ModBlocks.PINK_GARNET_DOOR,
+                        ModBlocks.PINK_GARNET_TRAPDOOR);
+
+        // to connect to fences / walls (possible to only include wooden fences)
+        getOrCreateTagBuilder(BlockTags.FENCES).add(ModBlocks.PINK_GARNET_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(ModBlocks.PINK_GARNET_FENCE_GATE);
+        getOrCreateTagBuilder(BlockTags.WALLS).add(ModBlocks.PINK_GARNET_WALL);
     }
 
 }

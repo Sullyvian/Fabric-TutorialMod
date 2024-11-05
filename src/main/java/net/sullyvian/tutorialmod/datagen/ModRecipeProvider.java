@@ -10,6 +10,7 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.sullyvian.tutorialmod.block.ModBlocks;
@@ -36,8 +37,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 "pink_garnet");
 
         // create both of the block <=> ingot opposite recipes
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.PINK_GARNET,
-                RecipeCategory.DECORATIONS, ModBlocks.PINK_GARNET_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.DECORATIONS, ModItems.PINK_GARNET,
+                RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_GARNET_BLOCK);
 
         // same for raw pink garnet, just for showcasing shape(less) recipes
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RAW_PINK_GARNET_BLOCK)
@@ -77,6 +78,38 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         // .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "<custom recipe name>"))
 
         // much more recipes functions to look at in RecipeProvider
+
+        createStairsRecipe(ModBlocks.PINK_GARNET_STAIRS, Ingredient.ofItems(ModItems.PINK_GARNET))
+                .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                .offerTo(exporter);
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_GARNET_SLAB,
+                Ingredient.ofItems(ModItems.PINK_GARNET))
+                .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.PINK_GARNET_BUTTON)
+                .input(ModItems.PINK_GARNET)
+                .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                .offerTo(exporter);
+        createPressurePlateRecipe(RecipeCategory.DECORATIONS, ModBlocks.PINK_GARNET_PRESSURE_PLATE,
+                Ingredient.ofItems(ModItems.PINK_GARNET))
+                .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                .offerTo(exporter);
+
+        createFenceRecipe(ModBlocks.PINK_GARNET_FENCE, Ingredient.ofItems(ModItems.PINK_GARNET))
+                .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                .offerTo(exporter);
+        createFenceGateRecipe(ModBlocks.PINK_GARNET_FENCE_GATE, Ingredient.ofItems(ModItems.PINK_GARNET))
+                .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                .offerTo(exporter);
+        // createWallRecipe (impossible, c'est la même qu'une trapdoor)
+
+        createDoorRecipe(ModBlocks.PINK_GARNET_DOOR, Ingredient.ofItems(ModItems.PINK_GARNET))
+                .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                .offerTo(exporter);
+        createTrapdoorRecipe(ModBlocks.PINK_GARNET_TRAPDOOR, Ingredient.ofItems(ModItems.PINK_GARNET))
+                .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                .offerTo(exporter);
     }
 
 }
